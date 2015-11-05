@@ -33,17 +33,22 @@ public class Intro {
 	
 		//Define an image
 		//Hint: Import the package edu.stanford.rsl.conrad.data.numeric.Grid2D
-		//TODO
+		Grid2D image = new Grid2D(imageSizeX,imageSizeY);
 	
 		//Draw a circle
 		int radius = 50;
 		//Set all pixels within the circle to 100
 		int insideVal = 100;
 	
-		//TODO
-		//TODO
-		//TODO
-		
+	for(int x = 0; x < imageSizeX; x++)
+	{
+		for(int y = 0; y <imageSizeY; y++)
+		{
+			if( Math.pow((x-(imageSizeX/2.f)), 2 + Math.pow((y-(imageSizeY/2.f)), 2)< Math.pow(radius, 2);
+			{
+				image.setAtIndex(x, y, insideval);
+			}
+	}
 		//Show ImageJ GUI
 		ImageJ ij = new ImageJ();
 		//Display image
@@ -91,7 +96,8 @@ public class Intro {
 		
 		for(int i = 0; i < y.length; i++)
 		{
-			//TODO
+			y[i] = Math.sin(2.0 * Math.PI * stepSize * (double) i);
+			
 			
 		}
 		
@@ -136,8 +142,8 @@ public class Intro {
 		//TODO
 		
 		//get size
-		int numRows = 0;
-		int numCols = 0;
+		int numRows = M.getRows();
+		int numCols = M.getCols();
 		//TODO
 		
 		//access elements of M
@@ -154,17 +160,17 @@ public class Intro {
 		
 		//Create 3x3 Matrix of 1's
 		SimpleMatrix Mones = new SimpleMatrix(3,3);
-		//TODO
+		Mones.ones();
 		//Create a 3x3 Matrix of 0's
 		SimpleMatrix Mzeros = new SimpleMatrix(3,3);
-		//TODO
+		Mzeros.zeros();
 		//Create a 3x3 Identity matrix
 		SimpleMatrix Midentity = new SimpleMatrix(3,3);
-		//TODO
+		Midentity.identity();
 		
 		//Matrix multiplication
-		//TODO
-		//System.out.println("M^T * M = " + ResMat.toString());
+		SimpleMAtrix ResMat = SimpleOperators.multiply(M, v1)
+		//System.out.println("M * v1 = " + ResVec.toString());
 		
 
 		//Matrix vector multiplication
@@ -179,7 +185,7 @@ public class Intro {
 		//System.out.println("[m(0)(2); m(1)(2)] = " + subVector);
 		
 		//Matrix elementwise multiplication
-		//TODO
+		SimpleOperators.
 		//System.out.println("M squared Elements: " + MsquaredElem.toString());
 		
 		//round vectors
